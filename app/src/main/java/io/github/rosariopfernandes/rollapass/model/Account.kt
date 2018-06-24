@@ -1,4 +1,15 @@
 package io.github.rosariopfernandes.rollapass.model
 
-data class Account(val accountId:Int, val userName:String, val userPassword:String,
-                   val userWebsite:String)
+import android.arch.persistence.room.Entity
+import android.arch.persistence.room.PrimaryKey
+
+@Entity
+data class Account(
+        @PrimaryKey(autoGenerate = true)
+        val accountId:Int?,
+        val userName:String,
+        val userPassword:String,
+        val userWebsite:String
+) {
+    constructor():this(null, "","","")
+}
