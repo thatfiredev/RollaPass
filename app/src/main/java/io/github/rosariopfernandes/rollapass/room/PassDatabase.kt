@@ -9,18 +9,18 @@ import io.github.rosariopfernandes.rollapass.model.Account
 import io.github.rosariopfernandes.rollapass.model.User
 
 @Database(entities = arrayOf(Account::class, User::class), version = 1)
-abstract class BankingDatabase : RoomDatabase() {
+abstract class PassDatabase : RoomDatabase() {
 
     abstract fun accountDao(): AccountDao
 
     companion object {
-        private var INSTANCE: BankingDatabase? = null
+        private var INSTANCE: PassDatabase? = null
 
-        fun getInstance(context: Context): BankingDatabase? {
+        fun getInstance(context: Context): PassDatabase? {
             if (INSTANCE == null) {
-                synchronized(BankingDatabase::class) {
+                synchronized(PassDatabase::class) {
                     INSTANCE = Room.databaseBuilder(context.applicationContext,
-                            BankingDatabase::class.java, "RollAPass.db")
+                            PassDatabase::class.java, "RollAPass.db")
                             .build()
                 }
             }
