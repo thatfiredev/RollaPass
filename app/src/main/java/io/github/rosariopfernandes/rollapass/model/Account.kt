@@ -6,10 +6,10 @@ import android.arch.persistence.room.PrimaryKey
 @Entity
 data class Account(
         @PrimaryKey(autoGenerate = true)
-        val accountId:Int?,
-        val userName:String,
-        val userPassword:String,
-        val userWebsite:String
+        var accountId:Int?,
+        var userName:String,
+        var userPassword:String,
+        var userWebsite:String
 ) {
     constructor():this(null, "","","")
 }

@@ -7,7 +7,7 @@ import android.arch.persistence.room.PrimaryKey
 data class User(
         @PrimaryKey(autoGenerate = true)
         var userId: Int?,
-        val masterPassword: String
+        var masterPassword: String
 ) {
     constructor(): this(null, "")
 }
