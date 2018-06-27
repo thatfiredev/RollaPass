@@ -7,12 +7,13 @@ import io.github.rosariopfernandes.rollapass.model.Account
 import io.github.rosariopfernandes.rollapass.room.PassDatabase
 
 
-class AccountsViewModel(app:Application) : AndroidViewModel(app) {
-    var accounts: LiveData<List<Account>>? = null
+class AccountViewModel(app:Application, accountId:Int) : AndroidViewModel(app) {
+
     var database: PassDatabase? = null
+    var account:LiveData<Account>? = null
 
     init {
         database = PassDatabase.getInstance(app.applicationContext)
-        accounts = database!!.accountDao().getAll()
+        account = database!!.accountDao().getAccount(accountId)
     }
 }
