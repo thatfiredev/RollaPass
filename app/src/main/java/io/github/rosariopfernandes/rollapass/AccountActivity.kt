@@ -75,6 +75,10 @@ class AccountActivity : AppCompatActivity() {
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
             R.id.action_edit -> {
+                val intent = Intent(this@AccountActivity,
+                        NewAccountActivity::class.java)
+                intent.putExtra("accountId", account?.accountId)
+                startActivity(intent)
                 true
             }
             R.id.action_delete -> {
