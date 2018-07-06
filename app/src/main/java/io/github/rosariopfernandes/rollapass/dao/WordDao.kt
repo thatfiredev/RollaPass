@@ -13,9 +13,6 @@ interface WordDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun createWords(words: List<Word>)
 
-    /*@Query("SELECT * FROM Word WHERE id = :id")
-    fun getWord(id: Int): LiveData<Word>*/
-
     @Query("SELECT * FROM Word")
     fun getWords(): LiveData<List<Word>>
 }

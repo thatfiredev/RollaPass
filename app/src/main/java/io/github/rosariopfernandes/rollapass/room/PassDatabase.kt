@@ -8,6 +8,7 @@ import android.content.Context
 import android.util.Log
 import io.github.rosariopfernandes.rollapass.R
 import io.github.rosariopfernandes.rollapass.dao.AccountDao
+import io.github.rosariopfernandes.rollapass.dao.UserDao
 import io.github.rosariopfernandes.rollapass.dao.WordDao
 import io.github.rosariopfernandes.rollapass.model.Account
 import io.github.rosariopfernandes.rollapass.model.User
@@ -22,6 +23,7 @@ abstract class PassDatabase : RoomDatabase() {
 
     abstract fun accountDao(): AccountDao
     abstract fun wordDao(): WordDao
+    abstract fun userDao(): UserDao
 
     companion object {
         private var INSTANCE: PassDatabase? = null
@@ -31,16 +33,6 @@ abstract class PassDatabase : RoomDatabase() {
                     INSTANCE ?: buildDatabase(context).also { INSTANCE = it }
                 }
 
-        /*fun getInstance(context: Context): PassDatabase? {
-            if (INSTANCE == null) {
-                synchronized(PassDatabase::class) {
-                    INSTANCE = Room.databaseBuilder(context.applicationContext,
-                            PassDatabase::class.java, "RollAPass.db")
-                            .build()
-                }
-            }
-            return INSTANCE
-        }*/
         private fun buildDatabase(context: Context) =
                 Room.databaseBuilder(context.applicationContext,
                         PassDatabase::class.java, "RollAPass.db")

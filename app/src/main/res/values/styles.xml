@@ -17,6 +17,11 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="PasswordDialog" parent="TextAppearance.AppCompat">
+        <item name="colorAccent">@color/primaryColor</item>
+        <item name="android:textColorHint">@color/backgroundColor</item>
+    </style>
+
     <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:textColor">@android:color/black</item>
     </style>
