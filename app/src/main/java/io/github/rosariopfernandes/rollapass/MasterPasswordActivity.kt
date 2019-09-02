@@ -31,15 +31,15 @@ class MasterPasswordActivity : AppCompatActivity() {
             } else {
                 btnNext.setOnClickListener { view ->
 
-                    val pwd = txtMasterPassword.editText?.text.toString()
+                    /*val pwd = txtMasterPassword.editText?.text.toString()
 
-                    if(pwd == user.masterPassword){
+                    if(pwd == user.masterPassword){*/
                         startActivity(Intent(this, MainActivity::class.java))
                         finish()
-                    } else {
+                    /*} else {
                         Snackbar.make(view, R.string.error_wrong_password,
                                 Snackbar.LENGTH_SHORT).show()
-                    }
+                    }*/
 
                 }
 
