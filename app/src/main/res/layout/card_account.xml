@@ -6,7 +6,7 @@
     android:layout_marginBottom="4dp"
     android:layout_height="wrap_content">
     <!-- Layout of the Manage's Card-->
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/cv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -86,5 +86,5 @@
 
 
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
     </LinearLayout>
