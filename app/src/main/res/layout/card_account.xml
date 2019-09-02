@@ -1,13 +1,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_marginTop="4dp"
     android:layout_marginBottom="4dp"
     android:layout_height="wrap_content">
     <!-- Layout of the Manage's Card-->
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    <androidx.cardview.widget.CardView
         android:id="@+id/cv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -64,12 +63,12 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_margin="8dp"
-                    android:src="@drawable/ic_visibility"
+                    app:srcCompat="@drawable/ic_visibility_black_24dp"
                     android:elevation="0dp"
                     android:id="@+id/btnShow" />
 
                 <ImageView
-                    android:src="@drawable/ic_delete"
+                    app:srcCompat="@drawable/ic_delete_white_24dp"
                     android:elevation="0dp"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
@@ -81,11 +80,11 @@
                     android:layout_height="24dp"
                     android:layout_margin="8dp"
                     android:elevation="0dp"
-                    android:src="@drawable/ic_content_copy"
+                    app:srcCompat="@drawable/ic_content_copy_black_24dp"
                     android:id="@+id/btnCopy"/>
             </LinearLayout>
 
 
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
     </LinearLayout>

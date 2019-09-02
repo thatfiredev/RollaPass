@@ -1,16 +1,16 @@
 package io.github.rosariopfernandes.rollapass
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import io.github.rosariopfernandes.rollapass.model.Account
 import io.github.rosariopfernandes.rollapass.room.AccountViewModelFactory
 import io.github.rosariopfernandes.rollapass.room.PassDatabase

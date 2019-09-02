@@ -1,7 +1,7 @@
 package io.github.rosariopfernandes.rollapass.dao
 
-import android.arch.lifecycle.LiveData
-import android.arch.persistence.room.*
+import androidx.lifecycle.LiveData
+import androidx.room.*
 import io.github.rosariopfernandes.rollapass.model.User
 
 @Dao

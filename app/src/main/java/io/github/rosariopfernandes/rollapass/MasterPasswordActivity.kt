@@ -1,13 +1,13 @@
 package io.github.rosariopfernandes.rollapass
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.design.widget.TextInputLayout
-import android.support.v7.app.AppCompatActivity
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.textfield.TextInputLayout
 import io.github.rosariopfernandes.rollapass.model.User
 import io.github.rosariopfernandes.rollapass.room.PassDatabase
 import io.github.rosariopfernandes.rollapass.viewmodel.UserViewModel
