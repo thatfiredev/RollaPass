@@ -31,7 +31,7 @@ class AccountActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val accountId = intent.extras.getInt("accountId")
+        val accountId = intent.extras!!.getInt("accountId")
         val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         ViewModelProviders.of(this, AccountViewModelFactory(application, accountId))
                 .get(AccountViewModel::class.java)
@@ -44,11 +44,11 @@ class AccountActivity : AppCompatActivity() {
                 txtPassword.editText?.setText(account.userPassword)
                 btnCopyUsername.setOnClickListener {
                     val clip = ClipData.newPlainText("username", account.userName)
-                    clipboard.primaryClip = clip
+                    clipboard.setPrimaryClip(clip)
                 }
                 btnCopyPassword.setOnClickListener {
                     val clip = ClipData.newPlainText("password", account.userPassword)
-                    clipboard.primaryClip = clip
+                    clipboard.setPrimaryClip(clip)
                 }
                 btnBrowse.setOnClickListener {
                     val webpage = Uri.parse("http://${account.userWebsite}")
