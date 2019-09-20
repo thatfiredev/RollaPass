@@ -74,7 +74,7 @@ class MasterPasswordActivity : AppCompatActivity() {
                         val user = User(1, newPassword)
                         database.userDao().createUser(user)
                         uiThread {
-                            Snackbar.make(currentFocus,
+                            Snackbar.make(currentFocus!!,
                                     R.string.confirmation_password_saved,
                                     Snackbar.LENGTH_LONG).show()
                         }
